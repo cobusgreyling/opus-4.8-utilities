@@ -1,3 +1,5 @@
+![Claude Opus 4.8 — Frontier Intelligence](claude-opus-4-8-header.png)
+
 # opus-4.8-utilities
 
 Small, runnable scripts that illustrate Claude **Opus 4.8** features on the Messages API (Python SDK). Each file is self-contained and prints what it demonstrates.
