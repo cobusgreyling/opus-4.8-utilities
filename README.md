@@ -4,6 +4,8 @@
 
 Small, runnable scripts that illustrate Claude **Opus 4.8** features on the Messages API (Python SDK). Each file is self-contained and prints what it demonstrates.
 
+Companion post: [**Claude Opus 4.8**](https://cobusgreyling.substack.com/p/claude-opus-48) by Cobus Greyling.
+
 ## Requirements
 
 - Python 3.8+
