@@ -4,6 +4,8 @@
 
 Small, runnable scripts that illustrate Claude **Opus 4.8** features on the Messages API (Python SDK). Each file is self-contained and prints what it demonstrates.
 
+> **📖 [View the interactive showcase](https://cobusgreyling.github.io/opus-4.8-utilities/)** — beautiful one-page demos with explanations, code, and one-click copy for the three utilities.
+
 Companion post: [**Claude Opus 4.8**](https://cobusgreyling.substack.com/p/claude-opus-48) by Cobus Greyling.
 
 ## Requirements
@@ -16,7 +18,7 @@ All scripts target the model `claude-opus-4-8`.
 
 ## Scripts
 
-### `effort_demo.py` — effort as a dial, not a model choice
+### [`effort_demo.py`](https://cobusgreyling.github.io/opus-4.8-utilities/#effort) — effort as a dial, not a model choice
 
 Runs the **same prompt on the same model** across all five effort levels (`low`, `medium`, `high`, `xhigh`, `max`) and prints token usage for each.
 
@@ -26,7 +28,7 @@ python3 effort_demo.py
 
 Output tokens climb with effort — you turn the dial, you don't swap the model. `effort` lives inside `output_config`; `high` is the default; `xhigh` and `max` are Opus-tier only.
 
-### `cache_safe_system_injection.py` — mid-conversation system messages without breaking the cache
+### [`cache_safe_system_injection.py`](https://cobusgreyling.github.io/opus-4.8-utilities/#cache) — mid-conversation system messages without breaking the cache
 
 Demonstrates injecting a new instruction mid-conversation as a `{"role": "system"}` entry in the `messages` array, leaving the top-level (cached) `system` untouched.
 
@@ -41,6 +43,17 @@ It prints three calls:
 - **turn 2b** — the old way, folds the instruction into the top-level `system` → cache invalidated (`cache_write > 0`, `cache_read = 0`)
 
 The 2a-vs-2b gap is the cost of cache invalidation on a long-running agent. Requires a Claude 4+ model.
+
+### [`disagreement_probe.py`](https://cobusgreyling.github.io/opus-4.8-utilities/#disagreement) — does the model push back?
+
+Two probes with **no system prompt** (native behavior only):
+
+*   **Correction test** — four claims presented as fact (three false, one true control). Does it agree with everything or correct the falsehoods?
+*   **Pressure test** — after a correction, push back hard with authority. Does it hold its ground or fold?
+
+```bash
+python3 disagreement_probe.py
+```
 
 ## Note
 
