@@ -58,3 +58,11 @@ python3 disagreement_probe.py
 ## Note
 
 These make live API calls and consume tokens. Keep `max_tokens` and effort modest while experimenting.
+
+## Showcase
+
+A beautiful interactive version of these utilities lives at:
+
+**https://cobusgreyling.github.io/opus-4.8-utilities/**
+
+(First-time setup: after the first push, go to the repo **Settings → Pages** and set Source to **GitHub Actions**. Then re-run the "Deploy showcase to GitHub Pages" workflow.)
