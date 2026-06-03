@@ -2,6 +2,8 @@
 
 # opus-4.8-utilities
 
+[![Deploy showcase to GitHub Pages](https://github.com/cobusgreyling/opus-4.8-utilities/actions/workflows/pages.yml/badge.svg)](https://github.com/cobusgreyling/opus-4.8-utilities/actions/workflows/pages.yml)
+
 Small, runnable scripts that illustrate Claude **Opus 4.8** features on the Messages API (Python SDK). Each file is self-contained and prints what it demonstrates.
 
 > **📖 [View the interactive showcase](https://cobusgreyling.github.io/opus-4.8-utilities/)** — beautiful one-page demos with explanations, code, and one-click copy for the three utilities.
